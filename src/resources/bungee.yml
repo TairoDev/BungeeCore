@@ -1,0 +1,6 @@
+name: BungeeCore
+version: '1.0-SNAPSHOT'
+main: me.tairodev.com.Main
+softdepends:
+  - LuckPerms
+  - PartyAndFriends
