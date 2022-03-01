@@ -1,0 +1,17 @@
+## SETTINGS ##
+Settings:
+  ## Set this to true if you want to disable private messages for players who are not friends
+  use-PartyAndFriend: true
+  ## HUB SECTION ##
+  Hubs:
+    - lobby
+    - lobby1
+  ## WHITELIST SECTION ##
+  whitelist-on: false
+  whitelist-message: '&6You are not in whitelist'
+  use-reportgoto: true
+
+## REPORT SETTINGS ##
+ReportSystem:
+  bypass-players:
+    - Hello
