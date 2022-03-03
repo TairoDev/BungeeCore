@@ -13,11 +13,7 @@ public class PAFHook {
         PAFPlayerManager api = PAFPlayerManager.getInstance();
         PAFPlayer pafPlayer = api.getPlayer(target);
 
-        if(api.getPlayer(player).isAFriendOf(pafPlayer)){
-            return true;
-        }else{
-            return false;
-        }
+        return api.getPlayer(player).isAFriendOf(pafPlayer);
     }
 
     public static void setPafEnabled(boolean enabled){
