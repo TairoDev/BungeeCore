@@ -60,13 +60,13 @@ public class Message extends Command {
                         if(methods.hasMessagesDisabled(target)){
 
                             player.sendMessage(ColorsAPI.colors(configUtil.getMessages().getString("Messages.player-message-format")
-                                    .replace("{server}", target.getServer().getInfo().getName())
-                                    .replace("{target}", target.getName())
-                                    .replace("{message}", builder)));
+                                            .replace("{server}", target.getServer().getInfo().getName())
+                                            .replace("{target}", target.getName())
+                                            .replace("{message}", builder)));
 
                             target.sendMessage(ColorsAPI.colors(configUtil.getMessages().getString("Messages.receiver-message-format")
-                                    .replace("{server}", player.getServer().getInfo().getName())
-                                    .replace("{player}", player.getName()
+                                            .replace("{server}", player.getServer().getInfo().getName())
+                                            .replace("{player}", player.getName()
                                             .replace("{message}", builder))));
 
                             main.getRecentMessages().put(player.getUniqueId(), target.getUniqueId());
