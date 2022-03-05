@@ -49,22 +49,18 @@ public class StaffChat extends Command {
                         }
                         for(ProxiedPlayer all : ProxyServer.getInstance().getPlayers()){
                             if(all.hasPermission("bungeecore.staffchat")){
-                                try {
-                                    if(LuckPermsHook.getLuckPermsStatus()){
-                                        all.sendMessage(ColorsAPI.colors(configUtil.getMessages().getString("Messages.staffchat-msg")
-                                        .replace("{server}", player.getServer().getInfo().getName())
-                                        .replace("{prefix}", LuckPermsHook.getPrefix(player))
-                                        .replace("{suffix}", LuckPermsHook.getSuffix(player))
-                                        .replace("{player}", player.getName())
-                                        .replace("{message}", builder)));
-                                    }else{
-                                        all.sendMessage(ColorsAPI.colors(configUtil.getMessages().getString("Messages.staffchat-msg")
-                                        .replace("{server}", player.getServer().getInfo().getName())
-                                        .replace("{player}", player.getName())
-                                        .replace("{message}", builder)));
-                                    }
-                                } catch (IOException e) {
-                                    e.printStackTrace();
+                                if(LuckPermsHook.getLuckPermsStatus()){
+                                    all.sendMessage(ColorsAPI.colors(configUtil.getMessages().getString("Messages.staffchat-msg")
+                                            .replace("{server}", player.getServer().getInfo().getName())
+                                            .replace("{prefix}", LuckPermsHook.getPrefix(player))
+                                            .replace("{suffix}", LuckPermsHook.getSuffix(player))
+                                            .replace("{player}", player.getName())
+                                            .replace("{message}", builder)));
+                                }else{
+                                    all.sendMessage(ColorsAPI.colors(configUtil.getMessages().getString("Messages.staffchat-msg")
+                                            .replace("{server}", player.getServer().getInfo().getName())
+                                            .replace("{player}", player.getName())
+                                            .replace("{message}", builder)));
                                 }
                             }
                         }
